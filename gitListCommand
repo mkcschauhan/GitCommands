@@ -1,0 +1,52 @@
+/* to create new repositroy in github using CLI  */
+"curl -u 'mkcschauhan' https://api.github.com/user/repos -d '{"name":"Repository Name", "description":"demo","private":"true"}'"
+
+/* "curl" is a unix command (above works on mac too) that retrieves and interacts with URLs. It is commonly already installed.
+   "-u" is a curl parameter that specifies the user name and password to use for server authentication. 
+  "mkcschauhan" is the username on github.
+   "https://api.github.com/user/repos -d" url path to make new repository on github.
+    {"name":"Repository Name", "private":"true"} repository name and the access private true or false.
+*/
+  
+/* Connect to a remote repository */
+ "git remote add origin https://github.com/mkcschauhan/REMO.git"
+
+/* to change the remote path */
+  "git remote set-url origin https://github.com/USERNAME/OTHERREPOSITORY.git"
+
+/* To check the currunt repository  */
+  "git remote -v"  //it will show the name of the repository.
+
+/* Create a working copy of a local repository  */
+   "git clone https://github.com/mkcschauhan/Hello-world.git"
+
+/* To add a file to repository */
+  "git add <filename>"
+
+/* to Add all files form the folder */
+  "git add *"
+
+/* Commit changes to head (but not yet to the remote repository) */
+  "git commit -m "Commit message""
+
+/* Commit any files you've added with git add, and also commit any files you've changed since then */
+  "git commit -a"
+
+/* Send or Push changes to the master branch of your remote repository */
+  "git push origin master"
+
+/* To create a new branch */
+  "git checkout -b <branchname>"
+/*to check the currunt branch */
+  "git branch"
+/*to check the currunt commit */
+  "git log"
+
+/* to push in a branch */
+  "git push origin <branchname>"
+
+/* to pull on our working directory */
+  "git pull"
+
+/* to go outside the currunt remote git repository */
+  "rm -rf .git"
